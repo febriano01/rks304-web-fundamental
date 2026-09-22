@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Account</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen py-10">
+    <div class="bg-white p-8 rounded shadow-md w-full max-w-md">
+        <h2 class="text-2xl font-bold mb-6 text-center text-gray-800">Registrasi Akun</h2>
+        
+        <!-- Action diarahkan ke dashboard.html -->
+        <form id="registerForm" action="dashboard.html" method="GET">
+            
+            <div class="mb-4">
+                <label class="block text-sm font-bold mb-2 text-gray-700">Username</label>
+                <input type="text" id="username" class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:border-blue-500">
+                <span id="err-username" class="error-text text-red-500 text-xs italic"></span>
+            </div>
+
+            <div class="mb-4">
+                <label class="block text-sm font-bold mb-2 text-gray-700">Password</label>
+                <input type="password" id="password" class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:border-blue-500">
+                <span id="err-password" class="error-text text-red-500 text-xs italic"></span>
+            </div>
+
+            <div class="mb-4">
+                <label class="block text-sm font-bold mb-2 text-gray-700">Nama Lengkap</label>
+                <input type="text" id="nama" class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:border-blue-500">
+                <span id="err-nama" class="error-text text-red-500 text-xs italic"></span>
+            </div>
+
+            <div class="mb-4">
+                <label class="block text-sm font-bold mb-2 text-gray-700">Tanggal Lahir</label>
+                <input type="date" id="tanggal_lahir" class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:border-blue-500">
+                <span id="err-tanggal" class="error-text text-red-500 text-xs italic"></span>
+            </div>
+
+            <div class="mb-4">
+                <label class="block text-sm font-bold mb-2 text-gray-700">Alamat</label>
+                <textarea id="alamat" rows="3" class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:border-blue-500"></textarea>
+                <span id="err-alamat" class="error-text text-red-500 text-xs italic"></span>
+            </div>
+
+            <div class="mb-6">
+                <label class="block text-sm font-bold mb-2 text-gray-700">Nomor Telepon</label>
+                <input type="number" id="no_telp" placeholder="62812xxxx" class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:border-blue-500">
+                <span id="err-notelp" class="error-text text-red-500 text-xs italic"></span>
+            </div>
+
+            <button type="submit" class="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700 font-bold transition">Daftar</button>
+        </form>
+    </div>
+
+    <!-- Memanggil file Javascript eksternal -->
+    <script src="validasi_input.js"></script>
+</body>
+</html>
